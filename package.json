@@ -11,8 +11,8 @@
 		"react-scripts": "3.3.0"
 	},
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"start": "NODE_PATH=src react-scripts start",
+		"build": "NODE_PATH=src react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
@@ -32,6 +32,8 @@
 		]
 	},
 	"devDependencies": {
+		"query-string": "^6.9.0",
+		"react-router-dom": "^5.1.2",
 		"reset-css": "^5.0.1"
 	}
 }
