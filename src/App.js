@@ -2,15 +2,17 @@ import React from 'react';
 import './index.scss';
 import AsyncSplitMe from './ssr/AsyncSplitMe';
 import { Route } from 'react-router-dom';
-import { Home, About } from './pages';
+import { Home, About, Posts } from './pages';
+import Menu from './components/Menu';
 
 function App() {
 	return (
 		<div className='App'>
-			<header className='App-header'>리액트 라우터를 배워봅시다.</header>
+			<Menu></Menu>
 			<AsyncSplitMe></AsyncSplitMe>
 			<Route exact path='/' component={Home}></Route>
 			<Route path='/about/:name?' component={About}></Route>
+			<Route path='/posts' component={Posts}></Route>
 		</div>
 	);
 }
