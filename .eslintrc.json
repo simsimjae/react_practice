@@ -1,0 +1,14 @@
+{
+	"parserOptions": { "sourceType": "module" },
+	"eslintConfig": {
+		"extends": ["react-app", "prettier", "airbnb"],
+		"plugins": ["prettier"],
+		"rules": {
+			"prettier/prettier": ["error"],
+			"react/prefer-stateless-function": 0,
+			"react/jsx-filename-extension": 0,
+			"react/jsx-one-expression-per-line": 0,
+			"react-hooks/exhaustive-deps": "warn"
+		}
+	}
+}

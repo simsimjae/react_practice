@@ -4,6 +4,7 @@ import AsyncSplitMe from "./ssr/AsyncSplitMe";
 import { Route } from "react-router-dom";
 import { Home, About, Posts, History } from "./pages";
 import Menu from "./components/Menu";
+import ColorBox from "./components/ColorBox";
 
 function App() {
 	return (
@@ -14,6 +15,8 @@ function App() {
 			<Route path="/about/:name?" component={About}></Route>
 			<Route path="/posts" component={Posts}></Route>
 			<Route path="/history" component={History}></Route>
+			<h2>Context API 사용하기</h2>
+			<ColorBox></ColorBox>
 		</div>
 	);
 }
