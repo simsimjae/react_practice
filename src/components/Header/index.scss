@@ -1,0 +1,17 @@
+.nav {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	a {
+		text-decoration: none;
+	}
+}
+
+.nav_item {
+	color: black;
+}
+
+.nav_title {
+	font-size: 18px;
+	font-weight: bold;
+}

@@ -1,0 +1,38 @@
+.cardlist {
+	margin: 20px 0;
+}
+
+.card {
+	display: flex;
+	& + & {
+		margin-top: 20px;
+	}
+}
+
+.card_contents {
+	padding: 12px;
+	border-radius: 5px;
+	border: 1px solid #e0e0e0;
+	min-height: 50px;
+	flex: 1;
+	text-align: left;
+}
+
+.card_buttons {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.card_button {
+	display: none;
+	border: none;
+	margin-left: 10px;
+	background: white;
+	svg {
+		color: #666;
+	}
+	.card.on & {
+		display: block;
+	}
+}

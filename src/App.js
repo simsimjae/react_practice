@@ -1,21 +1,31 @@
 import React from "react";
 import "./index.scss";
-import ColorBox from "./components/ColorBox";
-import ColorContext, { ColorProvider } from "./contexts/color"; // 색상 저장 창고 가져옴.
-import SelectColors from "./components/SelectColors";
+import Layout from "components/Layout";
+import Input from "components/Input";
+import Edit from "components/Edit";
+import CardList from "components/Card";
+import { BrowserRouter, Route } from "react-router-dom";
+import { AppContextProvider } from "context/AppContext";
 
 function App() {
 	return (
-		<div className="App">
-			<h2>Context API 사용하기</h2>
-
-			<ColorProvider>
-				<div>
-					<SelectColors />
-					<ColorBox />
-				</div>
-			</ColorProvider>
-		</div>
+		<BrowserRouter>
+			<AppContextProvider>
+				<Layout>
+					<Route
+						exact
+						path="/"
+						render={props => (
+							<>
+								<Input {...props} />
+								<CardList {...props} />
+							</>
+						)}
+					/>
+					<Route path="/edit" render={props => <Edit {...props} />} />
+				</Layout>
+			</AppContextProvider>
+		</BrowserRouter>
 	);
 }
 

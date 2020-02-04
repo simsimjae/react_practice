@@ -1,0 +1,35 @@
+.todo_area {
+	display: flex;
+	svg {
+		color: rgb(189, 199, 216);
+	}
+}
+
+.todo_input {
+	display: block;
+	resize: none;
+	width: 100%;
+	text-align: top;
+	border: 1px solid rgb(189, 199, 216);
+	border-radius: 5px;
+	box-sizing: border-box;
+	padding: 15px 10px;
+	margin-left: 10px;
+}
+
+.todo_footer {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 10px;
+}
+
+.todo_button {
+	background: none;
+	border: 1px solid rgb(189, 199, 216);
+	border-radius: 4px;
+	padding: 4px 7px;
+	color: grey;
+	& + & {
+		margin-left: 5px;
+	}
+}
