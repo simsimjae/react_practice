@@ -27,13 +27,13 @@ const Card = ({ inputText, cardId }) => {
 				{inputText}
 			</div>
 			<div className="card_buttons">
-				<button type="button" className="card_button">
-					<Link to={`/edit/${cardId}`}>
+				<Link to={`/edit/${cardId}`}>
+					<button type="button" className="card_button">
 						<FontAwesomeIcon icon={faPen} size="lg" />
-					</Link>
-				</button>
-				<button type="button" className="card_button">
-					<FontAwesomeIcon icon={faTrashAlt} size="lg" onClick={handleRemove} />
+					</button>
+				</Link>
+				<button type="button" className="card_button" onClick={handleRemove}>
+					<FontAwesomeIcon icon={faTrashAlt} size="lg" />
 				</button>
 			</div>
 		</article>
