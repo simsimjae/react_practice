@@ -2,7 +2,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { EditInput } from "components/Input";
 
-const index = ({ match }) => {
+const Edit = ({ match }) => {
 	return (
 		<div>
 			<Route
@@ -18,4 +18,4 @@ const index = ({ match }) => {
 	);
 };
 
-export default index;
+export default Edit;
